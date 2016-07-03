@@ -1,28 +1,77 @@
-div, body, section{
-    margin: 0;
-    padding: 0;
+/*div, body, section{*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+/*}*/
+#calendar-section{
+    margin-top: 20px;
+}
+.show-date-boxes{
+    position: relative;
+    display:  inline-block;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+    height: 80px;
+   padding-top: 15px;
+
+}
+
+.hours-count{
+    position: absolute;
+    display: inline-block;
+
+    bottom: 15px;
+    left:0px;
+    right: 0px;
 }
 #leftInfoBox{
     background:  mediumpurple;
-    display:  inline-block;
+}
 
-}
-#midleEmpty{
-    display: inline-block;
-}
 #rightInfoBox{
     background: lightblue;
-     display:  inline-block;
+}
+.month-nav{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.left-nav-button, .month-title,  .right-nav-button{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bolder;
 }
 
+.month-title{
+    font-size: 1.8em;
+}
 /*.calendar-box{*/
     /*width: 100%;*/
 /*}*/
+.day-box-head-smaller{
+    border: 1px solid black;
+    width: 14.285714285714285%;
+    float: left;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+    display:none;
+}
+.day-box-head{
+    border: 1px solid black;
+    width: 14.285714285714285%;
+    float: left;
+    height: 25px;
+    text-align: center;
+    font-weight: bold;
+    display:inline-block;
+}
+
+
 .day-box{
     border: 1px solid black;
     width: 14.285714285714285%;
     float: left;
-    height: 50px;
+    height: 11vw;
     display:inline-block;
 }
 
@@ -32,4 +81,24 @@ div, body, section{
 
 .under-top{
     border-top: none;
+}
+
+@media (max-width: 768px) {
+    .day-box-head{
+        display: none;
+    }
+    .day-box-head-smaller{
+        display: inline-block;
+    }
+}
+
+@media (max-width: 992px){
+    #middleEmpty{
+        display: none;
+    }
+}
+@media (max-width: 1200px){
+    #middleEmpty{
+        display: none;
+    }
 }
