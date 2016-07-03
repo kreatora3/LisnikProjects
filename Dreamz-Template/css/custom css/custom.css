@@ -1,0 +1,12 @@
+#leftInfoBox{
+    background:  mediumpurple;
+    display:  inline-block;
+    
+}
+#midleEmpty{
+    display: inline-block;
+}
+#rightInfoBox{
+    background: lightblue;
+     display:  inline-block;
+}
