@@ -1,7 +1,11 @@
+div, body, section{
+    margin: 0;
+    padding: 0;
+}
 #leftInfoBox{
     background:  mediumpurple;
     display:  inline-block;
-    
+
 }
 #midleEmpty{
     display: inline-block;
@@ -9,4 +13,23 @@
 #rightInfoBox{
     background: lightblue;
      display:  inline-block;
+}
+
+/*.calendar-box{*/
+    /*width: 100%;*/
+/*}*/
+.day-box{
+    border: 1px solid black;
+    width: 14.285714285714285%;
+    float: left;
+    height: 50px;
+    display:inline-block;
+}
+
+.after-first{
+    border-left: none;
+}
+
+.under-top{
+    border-top: none;
 }
