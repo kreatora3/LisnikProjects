@@ -68,10 +68,11 @@
 
 
 .day-box{
+    position: relative;
     border: 1px solid black;
     width: 14.285714285714285%;
     float: left;
-    height: 11vw;
+    height: 9vw;
     display:inline-block;
 }
 
@@ -83,6 +84,34 @@
     border-top: none;
 }
 
+.weekend{
+    background: mediumpurple;
+    color: white;
+}
+.date-number{
+    font-size: 2.5em;
+   margin-right:5%;
+    margin-top: 8%;
+}
+.title-reserved-hours{
+    position: absolute;
+    width: 90%;
+    display: inline-block;
+    font-size: 1em;
+    text-align: left;
+    bottom: 1%;
+    left: 2%;
+}
+
+.reserved-hours{
+    position: absolute;
+    width: 10%;
+    display: inline-block;
+    font-size: 1.6em;
+    text-align: right;
+    bottom: 1%;
+    right: 5%;
+}
 @media (max-width: 768px) {
     .day-box-head{
         display: none;
@@ -90,12 +119,33 @@
     .day-box-head-smaller{
         display: inline-block;
     }
+    
+    .title-reserved-hours{
+        font-size: 0.8em;
+    }
+    .reserved-hours{
+        font-size: 1em;
+    }
+    .date-number{
+        font-size: 1.2em;
+    }
 }
-
+.other-month{
+    background: gray;
+    color:ghostwhite;
+}
 @media (max-width: 992px){
     #middleEmpty{
         display: none;
     }
+    .reserved-hours{
+        font-size: 0.9em;
+    }
+
+    .date-number{
+        font-size: 1.5em;
+    }
+
 }
 @media (max-width: 1200px){
     #middleEmpty{

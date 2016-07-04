@@ -228,7 +228,6 @@
                 <div class="left-nav-button col-lg-4 col-md-4 col-sm-4"><< Предишен</div>
                 <div class="month-title col-lg-4 col-md-4 col-sm-4">Юли</div>
                 <div class="right-nav-button col-lg-4 col-md-4 col-sm-4">Следващ >></div>
-                <div class="glyphicon glyphicon-chevron-left left-nav-button-small col-lg-4 col-md-4 col-sm-4"></div>
             </div>
             <div class="row">
                 <div class="calendar-box container-fluid" >
@@ -239,25 +238,35 @@
                         <div class="day-box-head after-first">Сряда</div>
                         <div class="day-box-head after-first">Четвъртък</div>
                         <div class="day-box-head after-first">Петък</div>
-                        <div class="day-box-head after-first">Събота</div>
-                        <div class="day-box-head after-first">Неделя</div>
+                        <div class="day-box-head after-first weekend">Събота</div>
+                        <div class="day-box-head after-first weekend">Неделя</div>
 
                         <div class="day-box-head-smaller ">Пон</div>
                         <div class="day-box-head-smaller after-first">Вт</div>
                         <div class="day-box-head-smaller after-first">Ср</div>
                         <div class="day-box-head-smaller after-first">Чет</div>
                         <div class="day-box-head-smaller after-first">Пет</div>
-                        <div class="day-box-head-smaller after-first">Съб</div>
-                        <div class="day-box-head-smaller after-first">Нед</div>
+                        <div class="day-box-head-smaller after-first weekend">Съб</div>
+                        <div class="day-box-head-smaller after-first weekend">Нед</div>
                     </div>
                     <div class="week-row row-fluid">
                         <div class="day-box under-top"></div>
                         <div class="day-box after-first under-top"></div>
                         <div class="day-box after-first under-top"></div>
-                        <div class="day-box after-first under-top"></div>
-                        <div class="day-box after-first under-top"></div>
-                        <div class="day-box after-first under-top"></div>
-                        <div class="day-box after-first under-top"></div>
+                        <div class="day-box after-first under-top other-month">
+                            <span class="date-number pull-right">30</span>
+                            <p class="title-reserved-hours">Брой часове: </p>
+
+                            <p class="reserved-hours">2</p>
+                        </div>
+                        <div class="day-box after-first under-top">
+                            <span class="date-number pull-right">1</span>
+                            <p class="title-reserved-hours">Брой часове: </p>
+
+                            <p class="reserved-hours">2</p>
+                        </div>
+                        <div class="day-box after-first under-top weekend"></div>
+                        <div class="day-box after-first under-top weekend"></div>
                     </div>
                     <div class="week-row">
                         <div class="day-box under-top"></div>
@@ -265,47 +274,68 @@
                         <div class="day-box under-top after-first"></div>
                         <div class="day-box under-top after-first"></div>
                         <div class="day-box under-top after-first"></div>
-                        <div class="day-box under-top after-first"></div>
-                        <div class="day-box under-top after-first"></div>
+                        <div class="day-box under-top after-first weekend"></div>
+                        <div class="day-box under-top after-first weekend"></div>
                     </div>    <div class="week-row">
                     <div class="day-box under-top"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
-                    <div class="day-box under-top after-first"></div>
-                    <div class="day-box under-top after-first"></div>
+                    <div class="day-box under-top after-first weekend"></div>
+                    <div class="day-box under-top after-first weekend"></div>
                 </div>    <div class="week-row">
                     <div class="day-box under-top"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
-                    <div class="day-box under-top after-first"></div>
-                    <div class="day-box under-top after-first"></div>
+                    <div class="day-box under-top after-first weekend"></div>
+                    <div class="day-box under-top after-first weekend"></div>
                 </div>    <div class="week-row">
                     <div class="day-box under-top"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
-                    <div class="day-box under-top after-first"></div>
-                    <div class="day-box under-top after-first"></div>
+                    <div class="day-box under-top after-first weekend"></div>
+                    <div class="day-box under-top after-first weekend"></div>
                 </div>    <div class="week-row">
                     <div class="day-box under-top"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
                     <div class="day-box under-top after-first"></div>
-                    <div class="day-box under-top after-first"></div>
-                    <div class="day-box under-top after-first"></div>
+                    <div class="day-box under-top after-first weekend"></div>
+                    <div class="day-box under-top after-first weekend"></div>
                 </div>
 
                 </div>
             </div>
         </div>
     </section>
-
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="exampleModalLabel">Въведи брой часове</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="recipient-name" class="control-label">Часове:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
+                    <button type="button" class="btn btn-primary">Запиши</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <section class="content elements ">
         <div class="container ">
             <div class="row sub_content ">
@@ -1370,7 +1400,16 @@
 <script type="text/javascript " src="js/jquery.isotope.min.js "></script>
 <script type="text/javascript " src="js/swipe.js "></script>
 <script src="js/main.js "></script>
+<script>
 
+    $(".day-box").click(function(){
+        var $clicked = this;
+        $clicked.child()
+        $("#exampleModal").modal("show")
+    })
+
+
+</script>
 <!-- Start Style Switcher -->
 <div class="switcher "></div>
 <!-- End Style Switcher -->
