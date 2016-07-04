@@ -1403,9 +1403,19 @@
 <script>
 
     $(".day-box").click(function(){
-        var $clicked = this;
-        $clicked.child()
-        $("#exampleModal").modal("show")
+        var clicked = this
+        var hours = $(clicked).find("p.reserved-hours").text()
+        alert(hours)
+
+       $("#exampleModal").modal("show")
+
+        $("#recipient-name").keypress(function (e) {
+            //if the letter is not digit then display error and don't type anything
+            if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
+                //display error message
+                $(clicked).find("p.reserved-hours").text(5)
+                return false;
+            }})
     })
 
 
