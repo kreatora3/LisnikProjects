@@ -134,6 +134,20 @@
     background: gray;
     color:ghostwhite;
 }
+
+.warn{
+    display: none;
+    color: red;
+}
+
+#success-message{
+    display: none;
+}
+
+#info-message{
+    display: none;
+}
+
 @media (max-width: 992px){
     #middleEmpty{
         display: none;

@@ -207,7 +207,15 @@
                     </div>
                 </div>
             </section>
+
             <section id="calendar-section" class="calendar">
+                <div id="success-message" class="alert alert-success container ">
+                    <strong>Графика е обновен успешно.</strong>
+                </div>
+
+                <div id="info-message" class="alert alert-info container">
+                    <strong> Няма промяна в графика </strong>
+                </div>
                 <div class="container">
                     <div class="row">
                         <div id="leftInfoBox" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 show-date-boxes">
@@ -259,7 +267,7 @@
 
                                         <p class="reserved-hours" >2</p>
                                     </div>
-                                    <div class="day-box after-first under-top">
+                                    <div class="day-box after-first under-top active">
                                         <span class="date-number pull-right">1</span>
                                         <p class="title-reserved-hours">Брой часове: </p>
 
@@ -317,6 +325,8 @@
                             </div>
                         </div>
                     </div>
+
+
             </section>
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
                 <div class="modal-dialog" role="document">
@@ -328,14 +338,16 @@
                         <div class="modal-body">
                             <form>
                                 <div class="form-group">
-                                    <label for="recipient-name" class="control-label">Часове!!!!!!:</label>
+                                    <label for="recipient-name" class="control-label">Часове:</label>
                                     <input type="text" class="form-control" id="recipient-name" maxlength="1"/>
+                                    <p id="wrong-input" class="warn">Въведете число от 1 до 8</p>
+                                    <p id="empty-input" class="warn">Не може да запишете празна стойност</p>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default" data-dismiss="modal">Затвори</button>
-                            <button type="button" class="btn btn-primary">Запиши</button>
+                            <button type="button" class="btn btn-default close-modal" data-dismiss="modal">Затвори</button>
+                            <button type="button" class="btn btn-primary save-modal" data-dismiss="modal">Запиши</button>
                         </div>
                     </div>
                 </div>
@@ -1365,29 +1377,58 @@
         <script src="js/main.js "></script>
         
         <script type="text/javascript">
-            //$(document).ready(function() {
-            var clicked = null;
-                $(".day-box").click(function() {
+            $(document).ready(function() {
+
+                var oldValue;
+                var newValue;
+                var clicked = null;
+
+                $(".active").click(function() {
+
                     clicked = this;
-                    
-                    var hours = $(clicked).find("p.reserved-hours").text();
-                    alert(hours);
+
+                    oldValue = $(clicked).find("p.reserved-hours").text();
     
                     $("#exampleModal").modal("show");
+                    $("#recipient-name").val("");
+                    $("#wrong-input").css("display", "none");
+                    $("#empty-input").css("display", "none");
                 });
                 
                 $('#recipient-name').on('keypress', function(e) {
                     //if the letter is not digit then display error and don't type anything
                     if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 56)) {
                         //display error message
+                        $("#wrong-input").css("display", "block");
+
                         return false;
                     }
                 });
                 
-                $(document).on('input change', "#recipient-name", function() {
+                $("#recipient-name").on('input change', function() {
+                    $("#wrong-input").css("display", "none");
+                    $("#empty-input").css("display", "none");
                     limitText(this, 1);
-                        $(clicked).find("p.reserved-hours").text($(this).val())
+                    newValue = $(this).val();
                 });
+
+                $(".close-modal").on("click", function(){
+                    $("#info-message").css("display", "block").fadeOut(3500)
+                })
+
+                $(".save-modal").on("click", function(){
+                    if (newValue == "" || newValue == null){
+                        $("#empty-input").css("display", "block");
+                        return false
+                    }else{
+                        if(newValue != oldValue){
+                            $(clicked).find("p.reserved-hours").text(newValue)
+                            $("#success-message").css("display", "block").fadeOut(3500)
+                        }else{
+                            $("#info-message").css("display", "block").fadeOut(3500)
+                        }
+                  }
+                })
 
                 function limitText(field, maxChar) {
                     var ref = $(field),
@@ -1398,12 +1439,17 @@
                     if (val > 8) {
                         val = 8;
                     }
+                    if(val == 0){
+                        val = "";
+                    }
                     if(ref.val() != val)
                     {
                         ref.val(val);
                     }
                 }
-            //});
+
+
+            });
         </script>
         <!-- Start Style Switcher -->
         <div class="switcher "></div>
