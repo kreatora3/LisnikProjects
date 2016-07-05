@@ -2,6 +2,8 @@
     /*margin: 0;*/
     /*padding: 0;*/
 /*}*/
+
+
 #calendar-section{
     margin-top: 20px;
 }
@@ -32,8 +34,8 @@
     background: lightblue;
 }
 .month-nav{
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
 }
 .left-nav-button, .month-title,  .right-nav-button{
     text-align: center;
@@ -92,6 +94,7 @@
     font-size: 2.5em;
    margin-right:5%;
     margin-top: 8%;
+
 }
 .title-reserved-hours{
     position: absolute;
@@ -131,8 +134,8 @@
     }
 }
 .other-month{
-    background: gray;
-    color:ghostwhite;
+    background: lightgrey;
+    color: black;
 }
 
 .warn{

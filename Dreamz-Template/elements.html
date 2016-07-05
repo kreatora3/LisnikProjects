@@ -216,6 +216,7 @@
                 <div id="info-message" class="alert alert-info container">
                     <strong> Няма промяна в графика </strong>
                 </div>
+
                 <div class="container">
                     <div class="row">
                         <div id="leftInfoBox" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 show-date-boxes">
@@ -233,9 +234,11 @@
                     </div>
                     <div class="row month-nav">
                         <div class="left-nav-button col-lg-4 col-md-4 col-sm-4">
-                            << Предишен</div>
+                           <button class=" btn btn-info btn-block"><< Предишен</button>
+                            </div>
                                 <div class="month-title col-lg-4 col-md-4 col-sm-4">Юли</div>
-                                <div class="right-nav-button col-lg-4 col-md-4 col-sm-4">Следващ >></div>
+                                <div class="right-nav-button col-lg-4 col-md-4 col-sm-4">
+                                    <button class=" btn btn-info btn-block">Следващ >></button></div>
                         </div>
                         <div class="row">
                             <div class="calendar-box container-fluid">
@@ -258,68 +261,232 @@
                                     <div class="day-box-head-smaller after-first weekend">Нед</div>
                                 </div>
                                 <div class="week-row row-fluid">
-                                    <div class="day-box under-top"></div>
-                                    <div class="day-box after-first under-top"></div>
-                                    <div class="day-box after-first under-top"></div>
+                                    <div class="day-box under-top other-month">
+                                        <span class="date-number pull-right ">27</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours" >0</p>
+                                    </div>
+                                    <div class="day-box after-first under-top other-month">
+                                        <span class="date-number pull-right">28</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours" >0</p>
+                                    </div>
+                                    <div class="day-box after-first under-top other-month">
+                                        <span class="date-number pull-right">29</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours" >0</p>
+                                    </div>
                                     <div class="day-box after-first under-top other-month">
                                         <span class="date-number pull-right">30</span>
                                         <p class="title-reserved-hours">Брой часове: </p>
 
                                         <p class="reserved-hours" >2</p>
                                     </div>
-                                    <div class="day-box after-first under-top active">
+                                    <div class="day-box after-first under-top active-day current-month">
                                         <span class="date-number pull-right">1</span>
                                         <p class="title-reserved-hours">Брой часове: </p>
 
                                         <p class="reserved-hours">2</p>
                                     </div>
-                                    <div class="day-box after-first under-top weekend"></div>
-                                    <div class="day-box after-first under-top weekend"></div>
+                                    <div class="day-box after-first under-top weekend">
+                                        <span class="date-number pull-right">2</span>
+                                    </div>
+                                    <div class="day-box after-first under-top weekend">
+                                        <span class="date-number pull-right">3</span>
+                                    </div>
                                 </div>
                                 <div class="week-row">
-                                    <div class="day-box under-top"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
+                                    <div class="day-box under-top active-day current-month">
+                                        <span class="date-number pull-right">4</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">5</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">6</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">7</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">8</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">9</span>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">10</span>
+                                    </div>
                                 </div>
                                 <div class="week-row">
-                                    <div class="day-box under-top"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
+                                    <div class="day-box under-top active-day current-month">
+                                        <span class="date-number pull-right">11</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">12</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">13</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">14</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">15</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">16</span>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">17</span>
+                                    </div>
                                 </div>
                                 <div class="week-row">
-                                    <div class="day-box under-top"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
+                                    <div class="day-box under-top active-day current-month">
+                                        <span class="date-number pull-right">18</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">19</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">20</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">21</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">22</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">23</span>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">24</span>
+                                    </div>
                                 </div>
                                 <div class="week-row">
-                                    <div class="day-box under-top"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
+                                    <div class="day-box under-top active-day current-month">
+                                        <span class="date-number pull-right">25</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">26</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">27</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">28</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first active-day current-month">
+                                        <span class="date-number pull-right">29</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">30</span>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">31</span>
+                                    </div>
                                 </div>
                                 <div class="week-row">
-                                    <div class="day-box under-top"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
-                                    <div class="day-box under-top after-first weekend"></div>
+                                    <div class="day-box under-top other-month">
+                                        <span class="date-number pull-right">1</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first other-month">
+                                        <span class="date-number pull-right">2</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first other-month">
+                                        <span class="date-number pull-right">3</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first other-month">
+                                        <span class="date-number pull-right">4</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first other-month">
+                                        <span class="date-number pull-right">5</span>
+                                        <p class="title-reserved-hours">Брой часове: </p>
+
+                                        <p class="reserved-hours">0</p>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">6</span>
+                                    </div>
+                                    <div class="day-box under-top after-first weekend">
+                                        <span class="date-number pull-right">7</span>
+                                    </div>
                                 </div>
 
                             </div>
@@ -1379,15 +1546,27 @@
         <script type="text/javascript">
             $(document).ready(function() {
 
-                var oldValue;
-                var newValue;
-                var clicked = null;
 
-                $(".active").click(function() {
+
+                var newValue = null;
+                var clicked = null;
+                var oldValue;
+
+                var usedHours = 0;
+
+                $("div.current-month").each(function(){
+                    var hours = parseInt($(this).find("p.reserved-hours").text(),10);
+                    usedHours += hours;
+                })
+
+               calculateHours(usedHours);
+
+
+                $(".active-day").click(function() {
 
                     clicked = this;
 
-                    oldValue = $(clicked).find("p.reserved-hours").text();
+                    oldValue = parseInt($(clicked).find("p.reserved-hours").text(), 10);
     
                     $("#exampleModal").modal("show");
                     $("#recipient-name").val("");
@@ -1409,7 +1588,7 @@
                     $("#wrong-input").css("display", "none");
                     $("#empty-input").css("display", "none");
                     limitText(this, 1);
-                    newValue = $(this).val();
+                    newValue =parseInt( $(this).val(), 10);
                 });
 
                 $(".close-modal").on("click", function(){
@@ -1422,8 +1601,21 @@
                         return false
                     }else{
                         if(newValue != oldValue){
-                            $(clicked).find("p.reserved-hours").text(newValue)
-                            $("#success-message").css("display", "block").fadeOut(3500)
+                            var remainHours = parseInt($("#leftInfoBox").find("span.hours-count").text(), 10);
+                            if(newValue <= remainHours) {
+                                $(clicked).find("p.reserved-hours").text(newValue)
+                                $("#success-message").css("display", "block").fadeOut(3500)
+                                if(newValue > oldValue){
+                                    calculateHours(newValue, false)
+                                }else{
+                                    var recalculatedValue = oldValue - newValue
+                                    calculateHours(recalculatedValue, true)
+                                }
+
+                            }else{
+                                $(clicked).find("p.reserved-hours").text(remainHours)
+                                $("#success-message").text("Може да запишете само " + remainHours + " брой часове.").css("display", "block").fadeOut(3500)
+                            }
                         }else{
                             $("#info-message").css("display", "block").fadeOut(3500)
                         }
@@ -1448,9 +1640,24 @@
                     }
                 }
 
+                function calculateHours(hours, reverseLogic){
 
+                    var remaining = parseInt($("#leftInfoBox").find("span.hours-count").text(), 10)
+                    var used = parseInt( $("#rightInfoBox").find("span.hours-count").text(), 10)
+
+                    if(!reverseLogic){
+                    remaining -= hours;
+                    used += hours;
+                    }else{
+                        remaining += hours;
+                        used -= hours;
+                    }
+                    $("#leftInfoBox").find("span.hours-count").text(remaining)
+                    $("#rightInfoBox").find("span.hours-count").text(used)
+                }
             });
         </script>
+        
         <!-- Start Style Switcher -->
         <div class="switcher "></div>
         <!-- End Style Switcher -->
