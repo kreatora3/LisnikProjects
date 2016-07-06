@@ -1550,7 +1550,7 @@
 
                 var newValue = null;
                 var clicked = null;
-                var oldValue;
+                var oldValue = null;
 
                 var usedHours = 0;
 
@@ -1576,7 +1576,7 @@
                 
                 $('#recipient-name').on('keypress', function(e) {
                     //if the letter is not digit then display error and don't type anything
-                    if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 56)) {
+                    if (e.which != 8 && e.which != 0 && (e.which < 49 || e.which > 56)) {
                         //display error message
                         $("#wrong-input").css("display", "block");
 
@@ -1619,6 +1619,7 @@
                         }else{
                             $("#info-message").css("display", "block").fadeOut(3500)
                         }
+                      newValue = null;  
                   }
                 })
 
